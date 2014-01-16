@@ -222,12 +222,12 @@
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'dsf3t43wg34g43gredfsf43');
+	Configure::write('Security.salt', 'ni8yub9ygu67gyub87');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '45654534524657575574257375352738734534535');
+	Configure::write('Security.cipherSeed', '453452465757558998989398743984285352738734534535');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -267,7 +267,7 @@
  * Uncomment this line and correct your server timezone to fix
  * any date & time related errors.
  */
-	//date_default_timezone_set('UTC');
+	date_default_timezone_set('UTC');
 
 /**
  * `Config.timezone` is available in which you can set users' timezone string.
