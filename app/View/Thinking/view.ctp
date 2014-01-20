@@ -3,9 +3,9 @@
     <form method="post">
     	NickName: <input type="text" name="name" required="required"  >
     	Age: <input type="number" name="age" required="required" >
-    	Gender: 
+    	<p>Gender:</p> 
     	<input type="checkbox" name="gender" value="Male"> Male
     	<input type="checkbox" name="gender" value="Female"> Female
-    	<button type="submit" class="btn">Play</button>
+    	<button type="submit" class="btn btn-primary btn-block btn-large">Play</button>
     </form>
 </div>
