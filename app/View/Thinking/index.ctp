@@ -21,7 +21,9 @@
             	<h2 class="frame-4">Now!</h2>
 
             	<h2 class="frame-5"><span>View.</span> <span>Yes.</span> <span>No.</span></h2>
-	<a class="sp-circle-link" href="#">Try it!</a>
+                <div class="sp-circle-link">
+                    <?php echo $this->Html->link('Try it!', array('controller'=>'Thinking','action'=>'view')); ?>
+                </div>
 
         </div>
     </div>

@@ -1,8 +1,12 @@
 <div class="question">
-	Question i
-	<textarea rows="4" cols="50"> 
-		viet cac cau hoi 
+	<textarea rows="4" cols="50" text-align='center'>
+		<?php
+			echo ''.$question;
+		?>
+		<?php // echo ''.$rand; ?>
 	</textarea>
-	<button type="submit" class="btn btn-primary btn-block btn-large" >Yes</button>
-	<button type="submit" class="btn btn-primary btn-block btn-large"> No</button>
+	<?php
+		echo $this->Html->link('Yes',array('action'=>'question',1),array('class'=>'btn btn-primary btn-block btn-large'));
+		echo $this->Html->link('No',array('action'=>'question',0),array('class'=>'btn btn-primary btn-block btn-large'));
+	?>
 </div>

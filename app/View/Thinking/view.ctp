@@ -6,6 +6,9 @@
     	<p>Gender:</p> 
     	<input type="checkbox" name="gender" value="Male"> Male
     	<input type="checkbox" name="gender" value="Female"> Female
-    	<button type="submit" class="btn btn-primary btn-block btn-large">Play</button>
+        <div class="btn btn-primary btn-block btn-large">
+            <?php echo $this->Html->link('Play', array('controller'=>'Thinking','action'=>'question'));
+            ?>
+        </div>
     </form>
 </div>

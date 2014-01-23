@@ -67,7 +67,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '123456',
-		'database' => 'thingking',
+		'database' => 'thinking',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
