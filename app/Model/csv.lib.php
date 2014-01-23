@@ -694,11 +694,17 @@ class parseCSV {
   * find in csv file
   */
   function find($data=null, $key_search=null, $titles=null) {
-    foreach ($data as $key => $value) {
-      if($value[$titles] == $key_search)
-        $rows[] = $value;
+    if($data == null) {
+      die('Data null');
+    } else {
+      foreach ($data as $key => $value) {
+        if($value[$titles] == $key_search)
+          $rows[] = $value;
+      }
+      if(!empty($rows))
+          return $rows;
+      else return null;
     }
-    return $rows;
   }
 
 }
