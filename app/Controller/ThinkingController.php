@@ -1,6 +1,12 @@
 <?php
 class ThinkingController extends AppController {
 	public $helpers = array('Html', 'Form');
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+        $this->Auth->allow('question');
+    }
+
 	public function index() {
 
 	}

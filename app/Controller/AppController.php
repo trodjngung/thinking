@@ -31,10 +31,42 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-  public  function csv($fileName) {
-    require_once('../Model/csv.lib.php');
-    $csv = new parseCSV();
-    $csv->auto('../Csv/'.$fileName.'.csv');
-    return $csv;
-  }
+
+  	public  function csv($fileName) {
+    	require_once('../Model/csv.lib.php');
+    	$csv = new parseCSV();
+    	$csv->auto('../Csv/'.$fileName.'.csv');
+    	return $csv;
+  	}
+
+ 	public $components = array(
+        'Session',
+        'Auth'
+       
+    );
+	
+    public function beforeFilter() {
+        $this->Auth->allow('index', 'view');
+        $this->set('logged_in', $this->_loggedIn());
+        $this->set('users_username', $this->_usersUsername());
+    }
+
+
+    function _loggedIn() {
+    	$logged_in = FALSE;
+    	if($this->Auth->user()){
+    		$logged_in = TRUE;
+    	}
+    	return $logged_in;
+    }
+
+    // lay gia tri user hien tai
+    function _usersUsername() {
+    	$users_username = NULL;
+    	if($this->Auth->user()) {
+    		$users_username = $this->Auth->user('username');
+    	}
+    	return $users_username;
+    }
+    
 }
